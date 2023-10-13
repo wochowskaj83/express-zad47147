@@ -1,14 +1,13 @@
 const express = require('express');
 const app = express();
+const hbs = require('express-handlebars');
 
+app.engine("hbs", hbs.engine({ extname: ".hbs" }));
+app.set("view engine", "hbs");
 
 app.get('/', function(req, res){
-    res.send('Hello Nodemon');
+    res.render("home");
 });
-
-app.get('/user/:id', function(req, res) {
-    res.send('user ' + req.params.id)
-})
 
 app.listen(5500, function(){
     console.log('Serwer Node.js działa');
