@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Lista użytkowników</h2>
+
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        {{#each users}}
+        <tbody>
+            <tr>
+                <td>{{name}}</td>
+                <td>{{address}}</td>
+                <td><a href="">{{email}}</a></td>
+            </tr>
+        </tbody>
+    {{/each}}
+    </table>
+</div>
