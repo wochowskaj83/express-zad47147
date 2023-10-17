@@ -14,6 +14,6 @@ app.set("view engine", "hbs");
 
 app.get("/table", userController.index);
 
-app.listen(5500, function () {
+app.listen(5600, function () {
     console.log('Serwer Node.js działa');
 });

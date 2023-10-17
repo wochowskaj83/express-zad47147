@@ -5,6 +5,7 @@ module.exports = {
         User.find({})
         .lean()
         .then((users)=>{
+            console.log(users)
             res.render('tableViews/table', {users: users});
         }).catch((err) => {
             res.send(err)
